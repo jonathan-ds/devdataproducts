@@ -1,0 +1,47 @@
+---
+title       : Developing Data Products Assignment 2
+subtitle    : Making a Reproducable Pitch
+author      : Jonathan Graham
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+
+<article>
+<p><q> There is a need for applications which predict the height of children from their parents height...A DESPERATE NEED!</q></p>
+</article>
+
+--- .class #id 
+
+## Wihtout apps like this how will overbearing parents determine if they should plan on their children having a future with the NBA like Chuck Nevitt
+<img src= 'http://www.top1us.com/wp-content/uploads/2011/06/tallest-NBA-players-Chuck-Nevitt.jpg' height='600px'>
+
+--- 
+
+## or a distinguished acting career like Peter Dinklage!!
+<img src= 'http://nerdexaminer.com/wp-content/uploads/2015/05/peterdinklage3.jpg' height='600px'>
+
+
+--- 
+## Through the might of this single plot.  All this can be yours.
+```{r simple-plot, fig.height = 6, fig.align = 'center', message = F,warning = F}
+require(ggplot2)
+library(UsingR)
+data(galton)
+myfit <- lm(child ~parent, data=galton)
+qplot(child,parent,data=galton)+geom_abline(intercept=myfit$coefficients[1],slope=myfit$coefficients[2])
+```
+
+
+--- 
+
+## Conclusion
+
+- Applications like this provide information which allow parents to maintain their illusion of control.
+- The NBA could really use another Chuck Nevitt
+- There is nothing cooler than Peter Dinklage throwing up the horns.
