@@ -42,6 +42,6 @@ qplot(child,parent,data=galton)+geom_abline(intercept=myfit$coefficients[1],slop
 
 ## Conclusion
 
-- Applications like this provide information which allow parents to maintain their illusion of control.
-- The NBA could really use another Chuck Nevitt
-- There is nothing cooler than Peter Dinklage throwing up the horns.
+* Applications like this provide information which allow parents to maintain their illusion of control.
+* The NBA could really use another Chuck Nevitt
+* There is nothing cooler than Peter Dinklage throwing up the horns.
